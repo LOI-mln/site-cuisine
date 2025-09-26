@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="d-flex flex-column min-vh-100">
-    <!-- barre de navigation Bootstrap -->
+    <!-- barre de navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
         <div class="container">
             <a class="navbar-brand" href="?c=home">La Cosina</a>
@@ -19,6 +19,7 @@
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link" href="?c=home">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link" href="?c=contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="?c=ajout">Ajouter une recette</a></li>
                 </ul>
             </div>
         </div>

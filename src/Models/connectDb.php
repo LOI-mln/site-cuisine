@@ -1,20 +1,17 @@
 <?php
-try
-{
-    // Connexion à la base de données
-    // Modifiez les valeurs suivantes selon vos besoins
-    // (host, dbname, user, password)
-    // Le nom de votre base de données doit correspondre à celui que vous avez
-    //créé dans phpMyAdmin.
+// src/Models/connectDb.php
+try {
     $host = "localhost";
     $dbname = "lacosina";
     $user = "root";
-    $password = "root";
-    // Création de la connexion PDO
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
-}
-catch (Exception $e)
-{
-// En cas d'erreur, on affiche un message et on arrete le script
+    $password = "root"; 
+
+    $pdo = new PDO(
+        "mysql:host=$host;dbname=$dbname;charset=utf8mb4",
+        $user,
+        $password,
+        [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ]
+    );
+} catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
 }
