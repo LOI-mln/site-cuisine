@@ -18,6 +18,7 @@
             <div class="collapse navbar-collapse show">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link" href="?c=home">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="?c=liste">Recettes</a></li>
                     <li class="nav-item"><a class="nav-link" href="?c=contact">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="?c=ajout">Ajouter une recette</a></li>
                 </ul>

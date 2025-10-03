@@ -11,6 +11,10 @@ switch ($route) {
         require_once __DIR__ . '/src/Controllers/ajoutController.php';
         break;
 
+    case 'liste':
+        require_once __DIR__ . '/src/Controllers/listeController.php';
+        break;
+
     case 'enregistrer':
         require_once __DIR__ . '/src/Controllers/enregistrerController.php';
         break;
