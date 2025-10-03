@@ -2,29 +2,29 @@
 // index.php
 
 require_once __DIR__ . '/src/Models/connectDb.php';
-require_once __DIR__ . '/src/Views/header.php';
+require_once __DIR__ . '/src/Views/forme/header.php';
 
 $route = $_GET['c'] ?? 'home';
 
 switch ($route) {
     case 'ajout':
-        require_once __DIR__ . '/src/Controllers/ajoutController.php';
+        require_once __DIR__ . '/src/Controllers/recette/ajoutController.php';
         break;
 
     case 'liste':
-        require_once __DIR__ . '/src/Controllers/listeController.php';
+        require_once __DIR__ . '/src/Controllers/recette/listeController.php';
         break;
 
     case 'enregistrer':
-        require_once __DIR__ . '/src/Controllers/enregistrerController.php';
+        require_once __DIR__ . '/src/Controllers/recette/enregistrerController.php';
         break;
 
     case 'contact':
-        require_once __DIR__ . '/src/Controllers/contactController.php';
+        require_once __DIR__ . '/src/Controllers/contact/contactController.php';
         break;
 
     case 'sendContact':
-        require_once __DIR__ . '/src/Controllers/sendContactController.php';
+        require_once __DIR__ . '/src/Controllers/contact/sendContactController.php';
         break;
 
     case 'home':
@@ -33,4 +33,4 @@ switch ($route) {
         break;
 }
 
-require_once __DIR__ . '/src/Views/footer.php';
+require_once __DIR__ . '/src/Views/forme/footer.php';

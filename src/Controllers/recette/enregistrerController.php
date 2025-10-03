@@ -22,4 +22,4 @@ if (empty($erreurs)) {
     }
 }
 
-require_once __DIR__ . '/../Views/enregistrer.php';
+require_once __DIR__ . '/../Views/recette/enregistrer.php';
