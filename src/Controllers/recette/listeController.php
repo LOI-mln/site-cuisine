@@ -5,4 +5,4 @@
     // Exécution de la requête et récupération des données
     $requete->execute();
     $recipes = $requete->fetchAll(PDO::FETCH_ASSOC);
-    require_once (__DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'Views'.DIRECTORY_SEPARATOR.'liste.php');
+    require_once (__DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'Views'.DIRECTORY_SEPARATOR.'recette'.DIRECTORY_SEPARATOR.'liste.php');

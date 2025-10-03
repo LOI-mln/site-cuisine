@@ -1,3 +1,3 @@
 <?php
 // src/Controllers/homeController.php
-require_once __DIR__ . '/../Views/forme/home.php';
+require_once (__DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'Views'.DIRECTORY_SEPARATOR.'forme'.DIRECTORY_SEPARATOR.'home.php');

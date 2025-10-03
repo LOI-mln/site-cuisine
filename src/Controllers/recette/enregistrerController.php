@@ -22,4 +22,4 @@ if (empty($erreurs)) {
     }
 }
 
-require_once __DIR__ . '/../Views/recette/enregistrer.php';
+require_once (__DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'Views'.DIRECTORY_SEPARATOR.'recette'.DIRECTORY_SEPARATOR.'enregistrer.php');
