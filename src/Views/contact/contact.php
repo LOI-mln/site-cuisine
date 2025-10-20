@@ -2,7 +2,7 @@
 <h1>Formulaire de contact</h1>
 <p>Merci de remplir ce formulaire pour nous contacter.</p>
 
-<form method="post" action="?c=sendContact" class="row g-3">
+<form method="post" action="?c=Contact&a=enregistrer" class="row g-3">
     <div class="col-md-6">
         <label for="nom" class="form-label">Nom</label>
         <input type="text" id="nom" name="nom" class="form-control" required maxlength="100">

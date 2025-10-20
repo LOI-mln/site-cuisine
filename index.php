@@ -7,50 +7,59 @@ define('BASE_PATH', __DIR__);
 define('SRC_PATH', BASE_PATH . '/src');
 
 // Commun
-require_once SRC_PATH . '/Models/connectDb.php';      // doit définir $pdo
+require_once SRC_PATH . '/Controllers/recette/RecetteController.php';      // doit définir $pdo
 require_once SRC_PATH . '/Views/forme/header.php';
 
-// Route unique ?c=...
 $route = $_GET['c'] ?? 'home';
+$option = $_GET['a'] ?? 'index';
 
 try {
     switch ($route) {
 
-        case 'ajout':
-            require_once SRC_PATH . '/Controllers/recette/RecetteController.php';
-            $ctrl = new RecetteController();
-            $ctrl->ajouter();
-            break;
+        case 'Recette' :
 
-        case 'liste':
-            require_once SRC_PATH . '/Controllers/recette/RecetteController.php';
-            $ctrl = new RecetteController();
-            $ctrl->lister($pdo);
-            break;
+            switch ($option){
+                case 'ajout':
+                    require_once SRC_PATH . '/Controllers/recette/RecetteController.php';
+                    $ctrl = new RecetteController();
+                    $ctrl->ajout();
+                    break;
 
-        case 'enregistrer':
-            if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-                http_response_code(405);
-                echo '<p>Méthode non autorisée.</p>';
-                break;
-            }
-            require_once SRC_PATH . '/Controllers/recette/RecetteController.php';
-            $ctrl = new RecetteController();
-            $ctrl->enregistrer($pdo);
-            break;
+                case 'liste':
+                    require_once SRC_PATH . '/Controllers/recette/RecetteController.php';
+                    $ctrl = new RecetteController();
+                    $ctrl->liste();
+                    break;
 
-        case 'contact':
-            require_once SRC_PATH . '/Controllers/contact/contactController.php';
-            break;
+                case 'enregistrer':
+                    require_once SRC_PATH . '/Controllers/recette/RecetteController.php';
+                   
+                    $ctrl = new RecetteController();
+                    $ctrl->enregistrer($pdo);
+                    break;
+                }break;
 
-        case 'sendContact':
-            require_once SRC_PATH . '/Controllers/contact/sendContactController.php';
-            break;
+        case 'Contact':
+
+            switch($option){
+
+                case 'ajouter':
+                    require_once SRC_PATH . '/Controllers/contact/ContactController.php';
+                    $ctrl = new ContactController();
+                    $ctrl->ajouter();
+                    break;
+
+                case 'enregistrer':
+                    require_once SRC_PATH . '/Controllers/contact/ContactController.php';
+                    $ctrl = new ContactController();
+                    $ctrl->enregistrer($pdo);
+                    break;
+                }break;
 
         case 'home':
-        default:
-            require_once SRC_PATH . '/Controllers/homeController.php';
-            break;
+            default:
+                require_once SRC_PATH . '/Controllers/homeController.php';
+                break;
     }
 
 } catch (Throwable $e) {
