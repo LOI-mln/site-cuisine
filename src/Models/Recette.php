@@ -9,6 +9,7 @@ Class Recette {
         $database = new Database();
         $this->pdo = $database->getConnection();
     }
+    
     public function findAll() {
         $query = "SELECT * FROM recettes";
         $stmt = $this->pdo->prepare($query);
