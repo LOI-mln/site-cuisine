@@ -16,6 +16,7 @@ if (!empty($recipe['image'])) {
 <hr>
 <a href="?c=Recette&a=liste" class="btn btn-primary">Retour à la liste</a>
 
-<?php if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] == 1): ?>
+<?php if (isset($_SESSION['identifiant'])): ?>
 <a href="?c=Recette&a=modifier&id=<?php echo $recipe['id']; ?>" class="btn btn-secondary">Modifier la recette</a>
+<a href="?c=Favori&a=ajouter&id=<?php echo $recipe['id']; ?>" class="btn btn-secondary">Ajouter aux favoris</a>
 <?php endif; ?>
